@@ -26,3 +26,18 @@ That will scan the local directory and all subdirectories. It will list the file
 	  --help       Show this message and exit.
 
 To run as a test in Jenkins just use the command line or add it as a step to your Jenkins build. Jenkins will automatically fail the build if it sees the exit code 1.
+
+
+## Docker Usage:
+
+* Build
+
+```
+docker build -t credscanner .
+```
+
+* Run:
+
+```
+docker run -v /home/user/development/git/somerepo:/mnt/ --rm -it credscanner --path /mnt/
+```
